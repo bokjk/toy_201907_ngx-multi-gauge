@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "NgxMultiGauge": {
+      "root": "projects/ngx-multi-gauge",
+      "sourceRoot": "projects/ngx-multi-gauge/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-multi-gauge/tsconfig.lib.json",
+            "project": "projects/ngx-multi-gauge/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-multi-gauge/src/test.ts",
+            "tsConfig": "projects/ngx-multi-gauge/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-multi-gauge/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-multi-gauge/tsconfig.lib.json",
+              "projects/ngx-multi-gauge/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "NgxMultiGaugeChart"

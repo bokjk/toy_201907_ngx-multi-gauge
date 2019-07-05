@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-multi-gauge": [
+        "dist/ngx-multi-gauge"
+      ],
+      "ngx-multi-gauge/*": [
+        "dist/ngx-multi-gauge/*"
+      ]
+    }
   }
 }

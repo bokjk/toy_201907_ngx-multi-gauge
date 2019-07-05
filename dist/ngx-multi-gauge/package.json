@@ -1,0 +1,21 @@
+{
+  "name": "ngx-multi-gauge",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "main": "bundles/ngx-multi-gauge.umd.js",
+  "module": "fesm5/ngx-multi-gauge.js",
+  "es2015": "fesm2015/ngx-multi-gauge.js",
+  "esm5": "esm5/ngx-multi-gauge.js",
+  "esm2015": "esm2015/ngx-multi-gauge.js",
+  "fesm5": "fesm5/ngx-multi-gauge.js",
+  "fesm2015": "fesm2015/ngx-multi-gauge.js",
+  "typings": "ngx-multi-gauge.d.ts",
+  "metadata": "ngx-multi-gauge.metadata.json",
+  "sideEffects": false
+}
