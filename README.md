@@ -4,12 +4,12 @@
 
 ## Install
 
-  1. install***d3***
+  1. install ***d3***
   ```bash
   npm install d3
   ```
   
-  2. install***ngx-multi-gauge***
+  2. install ***ngx-multi-gauge***
   ```bash
   npm install ngx-multi-gauge
   ```
