@@ -1,15 +1,16 @@
 ## Sample Image
 
+![sample_img](https://github.com/bokjk/ngx-multi-gauge/blob/master/src/assets/sample_screen_shot/sample_01.jpg)
 
 
 ## Install
 
-  1. install***d3***
+  1. install ***d3***
   ```bash
   npm install d3
   ```
   
-  2. install***ngx-multi-gauge***
+  2. install ***ngx-multi-gauge***
   ```bash
   npm install ngx-multi-gauge
   ```

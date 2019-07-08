@@ -1,5 +1,6 @@
 ## Sample Image
 
+![sample_img](https://github.com/bokjk/ngx-multi-gauge/blob/master/src/assets/sample_screen_shot/sample_01.jpg)
 
 
 ## Install
