@@ -1,27 +1,72 @@
-# NgxMultiGaugeChart
+## Sample Image
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+  1. install***d3***
+  ```bash
+  npm install d3
+  ```
+  
+  2. install***ngx-multi-gauge***
+  ```bash
+  npm install ngx-multi-gauge
+  ```
+ 
+ 
+ ## Usage
+ 
+ 1. Setting
+ ```typescript
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  import { NgxMultiGaugeComponent } from "ngx-multi-gauge";
 
-## Build
+  // In your App's module:
+  declarations: [
+    NgxMultiGaugeComponent
+  ]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+ 
+ 2. Use
+ ```typescript
+ // app.html
+ <NgxMultiGauge class="chart" [rawData] = "data2"></NgxMultiGauge>
+  
+```
+ ```typescript
+ // app.ts
+ export class AppComponent {
+   data2: Array<any>;
+ 
+   constructor() {
+ 
+     this.data2 = [
+      { data_name : 'prePro' , title : '전처리', value : 50 },
+      { data_name : 'cantPro', title : '비처리', value : 60 },
+      { data_name : 'aftPro' , title : '후처리', value : 80 },
+     ];
+   }
+ }
+  
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ ## Properties
+ 
+ - data_name : Name of the data that you actually use.
+ - title     : Name to show on the chart
+ - value     : Actual values to be expressed in the chart
+ 
+ ## Further
+ 
+ - Custom Able
+   - Color
+     - Bar_bg_color
+     - Line_color
+   - Radius value
+   - Angle_max
+   - Total_value show/hide
+   - Line Width
+   - List Margin
+   - Center Circle Size
