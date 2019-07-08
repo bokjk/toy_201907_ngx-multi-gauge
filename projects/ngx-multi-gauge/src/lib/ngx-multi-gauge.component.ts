@@ -13,10 +13,10 @@ export class NgxMultiGaugeComponent implements OnInit {
 
   constructor() { }
 
-  @Input() rawData = [ { title_en : 'prePro' , title_kr : '전처리', value : 87 }, { title_en : 'cantPro', title_kr : '비처리', value : 91 }];
+  @Input() rawData = [ { data_name : 'prePro' , title : '전처리', value : 87 }, { data_name : 'cantPro', title : '비처리', value : 91 }];
 
-  sampleTitleEn = [];
-  sampleTitleKr = [];
+  sampleDataName = [];
+  sampleTitle = [];
   sampleData    = [];
   totalValue    = 0;
 
@@ -43,8 +43,8 @@ export class NgxMultiGaugeComponent implements OnInit {
 
     // 받은 데이터를 각 부분으로 나누어줌
     this.rawData.map( v => {
-      this.sampleTitleEn.push(v.title_en);
-      this.sampleTitleKr.push(v.title_kr);
+      this.sampleDataName.push(v.data_name);
+      this.sampleTitle.push(v.title);
       this.sampleData.push(v.value);
     });
 
@@ -150,7 +150,7 @@ export class NgxMultiGaugeComponent implements OnInit {
           // 비처리 전처리 항목의 제목 텍스트
           g.append('text')
             .text( (v) => {
-              return `${ this.sampleTitleKr[index] }`;
+              return `${ this.sampleTitle[index] }`;
             })
             .attr('transform', `translate(${title_centroid[0] - 5 },${title_centroid[1]})`)  // 똑바로 서있는 텍스트
             .attr('alignment-baseline', `middle`)

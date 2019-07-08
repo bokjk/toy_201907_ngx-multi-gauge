@@ -1,7 +1,7 @@
 <div class="chart_container">
   <div class="chart1" #chart1></div>
   <div class="circle_text" >
-    <div *ngFor = "let list of rawData"> {{list['title_kr']}} : {{list['value']}} </div>
+    <div *ngFor = "let list of rawData"> {{list['title']}} : {{list['value']}} </div>
     <div>종합 : {{ totalValue }} </div>
   </div>
 </div>

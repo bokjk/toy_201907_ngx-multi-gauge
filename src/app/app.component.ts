@@ -12,16 +12,16 @@ export class AppComponent {
   constructor() {
 
     this.data2 = [
-      { title_en : 'prePro' , title_kr : '전처리', value : 50 },
-      { title_en : 'cantPro', title_kr : '비처리', value : 60 },
-      { title_en : 'aftPro' , title_kr : '후처리', value : 80 },
+      { data_name : 'prePro' , title : '전처리', value : 50 },
+      { data_name : 'cantPro', title : '비처리', value : 60 },
+      { data_name : 'aftPro' , title : '후처리', value : 80 },
     ];
 
     this.data3 = [
-      { title_en : 'prePro' , title_kr : '전처리', value : 50 },
-      { title_en : 'cantPro', title_kr : '비처리', value : 60 },
-      { title_en : 'aftPro' , title_kr : '후처리', value : 80 },
-      { title_en : 'aftPro2', title_kr : '알고리즘', value : 100 },
+      { data_name : 'prePro' , title : '전처리', value : 50 },
+      { data_name : 'cantPro', title : '비처리', value : 60 },
+      { data_name : 'aftPro' , title : '후처리', value : 80 },
+      { data_name : 'aftPro2', title : '알고리즘', value : 100 },
     ];
 
   }

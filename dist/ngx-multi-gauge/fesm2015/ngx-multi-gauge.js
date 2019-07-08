@@ -24,9 +24,9 @@ NgxMultiGaugeService.ctorParameters = () => [];
  */
 class NgxMultiGaugeComponent {
     constructor() {
-        this.rawData = [{ title_en: 'prePro', title_kr: '전처리', value: 87 }, { title_en: 'cantPro', title_kr: '비처리', value: 91 }];
-        this.sampleTitleEn = [];
-        this.sampleTitleKr = [];
+        this.rawData = [{ data_name: 'prePro', title: '전처리', value: 87 }, { data_name: 'cantPro', title: '비처리', value: 91 }];
+        this.sampleDataName = [];
+        this.sampleTitle = [];
         this.sampleData = [];
         this.totalValue = 0;
         this.width = 500;
@@ -54,8 +54,8 @@ class NgxMultiGaugeComponent {
          * @return {?}
          */
         v => {
-            this.sampleTitleEn.push(v.title_en);
-            this.sampleTitleKr.push(v.title_kr);
+            this.sampleDataName.push(v.data_name);
+            this.sampleTitle.push(v.title);
             this.sampleData.push(v.value);
         }));
         // 종합 데이터
@@ -227,7 +227,7 @@ class NgxMultiGaugeComponent {
                      * @return {?}
                      */
                     (v) => {
-                        return `${this.sampleTitleKr[index]}`;
+                        return `${this.sampleTitle[index]}`;
                     }))
                         .attr('transform', `translate(${title_centroid[0] - 5},${title_centroid[1]})`) // 똑바로 서있는 텍스트
                         .attr('alignment-baseline', `middle`)
@@ -264,7 +264,7 @@ class NgxMultiGaugeComponent {
 NgxMultiGaugeComponent.decorators = [
     { type: Component, args: [{
                 selector: 'NgxMultiGauge',
-                template: "<div class=\"chart_container\">\r\n  <div class=\"chart1\" #chart1></div>\r\n  <div class=\"circle_text\" >\r\n    <div *ngFor = \"let list of rawData\"> {{list['title_kr']}} : {{list['value']}} </div>\r\n    <div>\uC885\uD569 : {{ totalValue }} </div>\r\n  </div>\r\n</div>\r\n",
+                template: "<div class=\"chart_container\">\r\n  <div class=\"chart1\" #chart1></div>\r\n  <div class=\"circle_text\" >\r\n    <div *ngFor = \"let list of rawData\"> {{list['title']}} : {{list['value']}} </div>\r\n    <div>\uC885\uD569 : {{ totalValue }} </div>\r\n  </div>\r\n</div>\r\n",
                 styles: [".chart_container{width:500px;height:500px;--border:1px solid #ddd;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:relative;font-size:14px}.chart_container .chart1{display:-webkit-box;display:flex}.chart_container .circle_text{width:100%;height:100%;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;position:absolute;font-size:.8em;font-weight:700}"]
             }] }
 ];

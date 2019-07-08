@@ -3,12 +3,12 @@ export declare class NgxMultiGaugeComponent implements OnInit {
     CHART1: ElementRef<any>;
     constructor();
     rawData: {
-        title_en: string;
-        title_kr: string;
+        data_name: string;
+        title: string;
         value: number;
     }[];
-    sampleTitleEn: any[];
-    sampleTitleKr: any[];
+    sampleDataName: any[];
+    sampleTitle: any[];
     sampleData: any[];
     totalValue: number;
     width: number;
